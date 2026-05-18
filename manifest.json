@@ -1,8 +1,8 @@
 {
   "schema": "forecry.openclaw.behavior.v1",
   "slug": "content-demon",
-  "name": "Content Demon",
-  "version": "2026.05.18.1",
+  "name": "Content Engine",
+  "version": "2026.05.18.2",
   "kind": "composed-behavior",
   "personality": {
     "tone": "Confident, punchy, fast",
@@ -45,9 +45,42 @@
     ]
   },
   "pricing": {
-    "tier": "plus",
-    "install_credits": 1,
+    "tier": "instinct",
+    "install_credits": 0,
     "refine_credits": 25,
-    "hosted_check_credits": 2
+    "hosted_check_credits": 2,
+    "preview_credits": 0
+  },
+  "subtitle": "Content Demon",
+  "outcome": "Turns notes into posts, pages and launch assets",
+  "buyer_promise": "Turns notes into posts, pages and launch assets",
+  "priority": 55,
+  "permission_mode_default": "draft",
+  "plugin": {
+    "install_feel": "plugin",
+    "enable_disable": true,
+    "uninstall": "remove local behavior config; optionally revoke API key",
+    "activity_log_fields": [
+      "behavior_slug",
+      "trigger",
+      "reason",
+      "tool",
+      "credit_cost",
+      "permission_mode",
+      "result",
+      "blocked_actions"
+    ]
+  },
+  "preview": {
+    "sample": "Content Engine triggered because it found a useful opportunity: turns notes into posts, pages and launch assets.",
+    "intensity_examples": {
+      "3": "occasional suggestions",
+      "6": "daily/active support",
+      "10": "hourly attempts when safe and budgeted"
+    }
+  },
+  "stacking": {
+    "priority": 55,
+    "conflict_rule": "user priority, then safety urgency, then lower credit cost; visible handoff only"
   }
 }

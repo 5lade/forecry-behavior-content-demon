@@ -1,9 +1,17 @@
 # Examples
 
+## Preview
+
+Content Engine: Turns notes into posts, pages and launch assets. I would start in draft mode at intensity 6.
+
+## Intensity 3
+
+Occasional, low-pressure suggestion.
+
 ## Intensity 6
 
-Content Demon notices a relevant opportunity, explains why it triggered, and offers the next safe action.
+Daily or active support when context is available.
 
 ## Intensity 10
 
-Content Demon checks at least hourly when safe, budgeted, and allowed; it still asks before external writes or risky actions.
+Attempts hourly when safe, budgeted, and allowed; still asks before risky or external actions.

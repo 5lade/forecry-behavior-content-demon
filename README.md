@@ -1,12 +1,12 @@
-# Content Demon
+# Content Engine
 
-Forecry Behavior for OpenClaw.
+_Content Demon_
 
-Content Demon combines personality, hobby/tool-drive, and intensity into a subscribable OpenClaw instinct delivered through a Forecry API key.
+Forecry Behavior for OpenClaw. This pack is plugin-simple for the customer: click Install Behavior, connect OpenClaw with a Forecry API key, set intensity, and review the trust log.
 
-- **Personality:** Confident, punchy, fast
-- **Drive:** write, repurpose, launch copy, content momentum
+- **Outcome:** Turns notes into posts, pages and launch assets
 - **Default intensity:** 6/10
-- **Tier:** Plus
+- **Permission mode:** draft
+- **Plan:** Instinct
 
-Install/fetch through `https://api.forecry.com/v1/behaviors/content-demon/pack` with a Forecry API key.
+Private prompts/tool logic stay hosted behind Forecry APIs. The local manifest declares safe behavior metadata only.
