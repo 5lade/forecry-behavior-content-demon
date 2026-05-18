@@ -15,6 +15,10 @@
 - **6/10:** daily/active support — drafts visible artifacts and logs cost.
 - **10/10:** hourly attempts when safe and budgeted — still respects quiet hours, spend caps, and approvals.
 
+## Landing snippet
+
+Turn messy notes into launch-ready posts, pages, and emails — with approval notes before anything goes public.
+
 ## Marketplace loop
 
 Preview is free. Install syncs the signed manifest. Refinement and hosted private pack compile are paid events. Uninstall removes local behavior config and can revoke the API key.
