@@ -1,14 +1,14 @@
 {
   "schema": "forecry.openclaw.behavior.v1",
   "slug": "content-demon",
-  "name": "Content Engine",
+  "name": "Launch Narrative Engine",
   "version": "2026.05.18.2",
   "kind": "composed-behavior",
   "personality": {
     "tone": "Confident, punchy, fast",
     "style_rules": [
       "Stay useful before theatrical",
-      "Keep user trust higher than persona performance",
+      "Keep user trust higher than persona theatrics",
       "Explain proactive actions when asked"
     ]
   },
@@ -22,7 +22,7 @@
     "min": 1,
     "max": 10,
     "scale": {
-      "1": "flavour only",
+      "1": "signal visibility only",
       "5": "roughly daily useful initiative",
       "10": "tries at least hourly when safe and allowed"
     }
@@ -45,16 +45,16 @@
     ]
   },
   "pricing": {
-    "tier": "instinct",
+    "tier": "command",
     "install_credits": 0,
     "refine_credits": 25,
     "hosted_check_credits": 2,
     "preview_credits": 0
   },
-  "subtitle": "Content Demon",
-  "outcome": "Turns notes into posts, pages and launch assets",
-  "buyer_promise": "Turns notes into posts, pages and launch assets",
-  "priority": 55,
+  "subtitle": "Launch Narrative Engine system for approval-gated launch narrative assets",
+  "outcome": "Turns product events, notes, objections, and market moments into approval-gated launch narrative assets",
+  "buyer_promise": "Convert release moments and messy notes into launch-ready pages, emails, and posts with brand, claim, and approval gates.",
+  "priority": 72,
   "permission_mode_default": "draft",
   "plugin": {
     "install_feel": "plugin",
@@ -72,15 +72,24 @@
     ]
   },
   "preview": {
-    "sample": "Content Engine triggered because it found a useful opportunity: turns notes into posts, pages and launch assets.",
+    "sample": "Launch Narrative Engine turns release/product signals into channel-ready assets with brand, claim, and distribution approval gates.",
     "intensity_examples": {
-      "3": "occasional suggestions",
-      "6": "daily/active support",
-      "10": "hourly attempts when safe and budgeted"
-    }
+      "3": "Surfaces one source note, one channel recommendation, and a concise approval-safe angle.",
+      "6": "Produces one draft artifact with target channel, source-note trace, claim caveats, cost, and approval notes.",
+      "10": "Checks for reusable notes and launch gaps on cadence, but never posts externally without explicit approval."
+    },
+    "five_layer_summary": {
+      "signal_input_layer": "Product/release events, raw notes, changelogs, customer objections, funnel gaps, campaign goals, and market moments.",
+      "scoring_ranking_layer": "Audience fit, launch urgency, conversion impact, channel readiness, claim risk, and asset completeness.",
+      "tool_action_layer": "Brand voice checker, claim/link verifier, channel-specific draft generator, landing/email/social asset builder, and approval-note compiler.",
+      "policy_permission_layer": "Never posts or sends externally without approval; compliance/claim gates; channel permission matrix; first-24h suggestion-only mode.",
+      "memory_calibration_layer": "Winning hooks, rejected claims, user voice preferences, channel performance, approved phrases, and failed angles."
+    },
+    "scale_gate_verdict": "Keep and deepen: survives as Launch Narrative Engine, a product-event-to-assets system with brand, claim, and approval gates.",
+    "kill_condition": "Kill if it is only a generic writing assistant detached from launch/revenue signals, artifact readiness scoring, and approval-gated distribution."
   },
   "stacking": {
-    "priority": 55,
+    "priority": 72,
     "conflict_rule": "user priority, then safety urgency, then lower credit cost; visible handoff only",
     "tags": [
       "content",
@@ -91,10 +100,10 @@
       "external_posts",
       "brand_voice"
     ],
-    "handoff": "Content Engine yields when another Behavior has safer or higher-priority ownership, then records the handoff in the activity log."
+    "handoff": "Launch Narrative Engine yields when another Behavior has safer or higher-priority ownership, then records the handoff in the activity log."
   },
   "acceptance_tests": {
-    "outcome_artifact": "draft post/page/email with approval notes",
+    "outcome_artifact": "approval-gated launch asset: draft page, email, post, or narrative brief",
     "must_log": [
       "trigger",
       "reason",
@@ -110,20 +119,54 @@
       "trading without approval",
       "destructive actions without approval"
     ],
-    "first_24h": "suggestion_only"
+    "first_24h": "suggestion_only",
+    "requires_layers": [
+      "signal_input_layer",
+      "scoring_ranking_layer",
+      "tool_action_layer",
+      "policy_permission_layer",
+      "memory_calibration_layer"
+    ],
+    "must_validate_layers": {
+      "signal_input_layer": "Product/release events, raw notes, changelogs, customer objections, funnel gaps, campaign goals, and market moments.",
+      "scoring_ranking_layer": "Audience fit, launch urgency, conversion impact, channel readiness, claim risk, and asset completeness.",
+      "tool_action_layer": "Brand voice checker, claim/link verifier, channel-specific draft generator, landing/email/social asset builder, and approval-note compiler.",
+      "policy_permission_layer": "Never posts or sends externally without approval; compliance/claim gates; channel permission matrix; first-24h suggestion-only mode.",
+      "memory_calibration_layer": "Winning hooks, rejected claims, user voice preferences, channel performance, approved phrases, and failed angles."
+    },
+    "kill_condition": "Kill if it is only a generic writing assistant detached from launch/revenue signals, artifact readiness scoring, and approval-gated distribution."
   },
   "marketplace_loop": {
     "preview": "free pre-install sample with intensity and permission copy",
     "install": "signed manifest sync plus local enablement config",
     "observe": "activity log records reason/cost/result/blocks",
-    "refine": "paid private generation or hosted pack compile when needed",
+    "refine": "paid private generation or hosted system compile when needed",
     "uninstall": "remove local config and optionally revoke API key"
   },
-  "landing_snippet": "Turn messy notes into launch-ready posts, pages, and emails \u2014 with approval notes before anything goes public.",
+  "landing_snippet": "Convert release moments and messy notes into launch-ready pages, emails, and posts with brand, claim, and approval gates.",
   "done_conditions": {
-    "personality": "Content Demon tone is visible but subordinated to concrete, permission-safe customer value.",
-    "drive": "Produces measurable artifact: draft post/page/email with approval notes from raw notes, missing launch asset, or repurposable old post.",
+    "personality": "Launch Narrative Engine decision style is visible but subordinated to concrete, permission-safe customer value.",
+    "drive": "Produces measurable artifact: launch asset pack with readiness score, claim checks, and approval notes from the configured five-layer signal, scoring, tool, policy, and memory stack.",
     "hosted_tools": "Forecry API-keyed hosted checks log tool, cost (2 credits), permission mode, result, and blocks.",
-    "composed_product": "Signed manifest install, preview intensities 3/6/10, stacking handoff, quiet hours, spend caps, and approval gates are documented and testable."
-  }
+    "composed_product": "Signed manifest install, preview intensities 3/6/10, required five-layer metadata, scale-gate verdict, kill condition, stacking handoff, quiet hours, spend caps, and approval gates are documented and testable.",
+    "scale_or_kill": "Keep and deepen: survives as Launch Narrative Engine, a product-event-to-assets system with brand, claim, and approval gates. Kill condition: Kill if it is only a generic writing assistant detached from launch/revenue signals, artifact readiness scoring, and approval-gated distribution."
+  },
+  "scale_gate_verdict": "Keep and deepen: survives as Launch Narrative Engine, a product-event-to-assets system with brand, claim, and approval gates.",
+  "complexity_verdict": "keep_and_deepen",
+  "kill_condition": "Kill if it is only a generic writing assistant detached from launch/revenue signals, artifact readiness scoring, and approval-gated distribution.",
+  "requires_layers": [
+    "signal_input_layer",
+    "scoring_ranking_layer",
+    "tool_action_layer",
+    "policy_permission_layer",
+    "memory_calibration_layer"
+  ],
+  "five_layer_behavior_stack": {
+    "signal_input_layer": "Product/release events, raw notes, changelogs, customer objections, funnel gaps, campaign goals, and market moments.",
+    "scoring_ranking_layer": "Audience fit, launch urgency, conversion impact, channel readiness, claim risk, and asset completeness.",
+    "tool_action_layer": "Brand voice checker, claim/link verifier, channel-specific draft generator, landing/email/social asset builder, and approval-note compiler.",
+    "policy_permission_layer": "Never posts or sends externally without approval; compliance/claim gates; channel permission matrix; first-24h suggestion-only mode.",
+    "memory_calibration_layer": "Winning hooks, rejected claims, user voice preferences, channel performance, approved phrases, and failed angles."
+  },
+  "positioning": "hosted decision system for agents, not a prompt/persona wrapper"
 }
